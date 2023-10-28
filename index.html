@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div id="header">
+    
+<div class="container">
+    <h1 style="font-size: 30px; color: beige; font-family: ;">Rajnish Kumar Jha</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-text">
+        <p>Web developer</p>
+        <h1>Hii I'm <span>Rajnish</span></h1>
+    </div>
+</div>
+</div>
+<!-----------about---------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/user.jpg" alt="User(Me)">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi there! I'm a passionate CSE student from NIET Greater Noida with a keen interest in web development and
+                    software engineering. I love learning new technologies and applying them to create innovative solutions.
+                    Currently,
+                    I'm exploring various programming languages and frameworks to enhance my skills and knowledge in
+                    the
+                    field of computer science.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skill')">Skill</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        
+                    </div>
+                    <div class="tab-contents active-tab" id="skill">
+                        <ul>
+                            <li><span>Web developer</span><br>Designing Web Interfeces</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span>Python Basics</span><br>University of Michigan</li>
+                            <li><span>Introduction to AI</span><br>IBM</li>
+                            <li><span>Python for data science,AI &</span><br> IBM</li>
+                            <li><span>Human Centered Design for Inclusive Innovation</span><br>University of Toronto</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B-tech(CSE)</span><br>NIET, Greater Noida</span><br>2022-2026</li>
+                            <li><span>Intermediate</span><br>RDS COLLEGE,MUZAFFARPUR</span><br>2018-2020</li>
+                            <li><span>Matriculation</span><br>DAV Public School, Malighat, Muzafffarpur</span><br>2017-2018</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------contact------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>rajnishdavianforbharat@gmail.com</p>
+                <div class="social-icon">
+                    <a href="https://www.linkedin.com/in/irajnishjha/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/irajnishjha/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/irajnishjha"><i class="fab fa-twitter"></i></a>
+                </div>
+                <a href="Images/cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+        </div class="contact-right">
+       </div>
+       <div class="copyright">
+        <p>Copyright © Rajnish </p>
+
+       </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+}
+
+
+</script>
+
+    
+</body>
+</html>
